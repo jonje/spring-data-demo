@@ -21,6 +21,11 @@ create table if not exists comments (
     primary key (id)
 );
 
+create table if not exists book (
+    id int auto_increment not null,
+    title varchar()
+)
+
 insert into post (title, content) values ('Test Post', 'This is a test post for the app.');
 insert into post (title, content) values ('Test Post 2', 'This is a test post for the app. This one has a little more details');
 insert into comments (content, comment_month, comment_year, post_id) values ('First comment', 10, 2022, 1);
