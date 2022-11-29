@@ -1,7 +1,7 @@
 package com.example.springdatademo.service;
 
 import com.example.springdatademo.entity.PostEntity;
-import com.example.springdatademo.repository.PostRepository;
+import com.example.springdatademo.repositories.PostRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

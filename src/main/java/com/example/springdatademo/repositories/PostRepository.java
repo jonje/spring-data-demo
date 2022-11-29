@@ -1,4 +1,4 @@
-package com.example.springdatademo.repository;
+package com.example.springdatademo.repositories;
 
 import com.example.springdatademo.entity.PostEntity;
 import org.springframework.data.jpa.repository.Query;
