@@ -9,30 +9,22 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Objects;
 
-/**
- * @author jpjensen
- * @version %I%
- */
 @Getter
 @Setter
 @Entity
-public class Book {
+public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private String isbn;
-    private String publisher;
-    private Long authorId;
+    private String firstname;
+    private String lastname;
 
-    public Book() {
+    public Author() {
     }
 
-    public Book(String title, String isbn, String publisher, Long authorId) {
-        this.title = title;
-        this.isbn = isbn;
-        this.publisher = publisher;
-        this.authorId = authorId;
+    public Author(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
     @Override
@@ -40,13 +32,13 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Book book = (Book) o;
-
-        return Objects.equals(id, book.id);
+        Author author = (Author) o;
+        return Objects.equals(id, author.id);
     }
 
     @Override
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
     }
+
 }
